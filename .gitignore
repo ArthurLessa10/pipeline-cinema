@@ -1,0 +1,24 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Banco de dados e arquivos locais
+*.duckdb
+*.duckdb.wal
+export/
+raw/*.zip
+
+# Python cache e testes
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
