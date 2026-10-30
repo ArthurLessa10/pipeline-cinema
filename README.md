@@ -16,3 +16,4 @@ O pipeline segue arquitetura em três camadas desacopladas com DuckDB e Python:
 - uv (gerenciador de ambiente e dependências)
 - DuckDB (`cinema.duckdb`)
 - pytest & pytest-cov (testes unitários com dados sintéticos e cobertura $\ge$ 60%)
+
