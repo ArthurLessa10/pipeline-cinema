@@ -73,9 +73,14 @@ def garantir_dados_brutos(pasta_destino: Path = PASTA_RAW) -> None:
         sys.exit(1)
 
 
-def ingerir(caminho_banco: str = "cinema.duckdb", pasta_dados: Path = PASTA_RAW) -> dict[str, int]:
+def ingerir(
+    caminho_banco: str = "cinema.duckdb",
+    pasta_dados: Path = PASTA_RAW,
+    auto_download: bool = True,
+) -> dict[str, int]:
     """Lê os CSVs de raw e grava as tabelas no schema raw do DuckDB com tipagem bruta VARCHAR."""
-    garantir_dados_brutos(pasta_dados)
+    if auto_download:
+        garantir_dados_brutos(pasta_dados)
 
     con = conectar(caminho_banco)
     criar_schema(con, "raw")
